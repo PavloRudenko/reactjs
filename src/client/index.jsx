@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import { hydrateRoot } from 'react-dom/client'
 import { Header } from '../shared/Header'
 
