@@ -1,7 +1,7 @@
 import React from 'react'
-import { hydrateRoot } from 'react-dom/client'
+import { hydrate } from 'react-dom'
 import { Header } from '../shared/Header'
 
 document.addEventListener('DOMContentLoaded', () => {
-  hydrateRoot(document.getElementById('react_root'), <Header />)
+  hydrate(<Header />, document.getElementById('react_root'))
 })

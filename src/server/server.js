@@ -1,5 +1,5 @@
 import express from 'express'
-import ReactDOM from 'react-dom/server'
+import { renderToString } from 'react-dom/server'
 
 import { Header } from '../shared/Header'
 import { indexTemplate } from './indexTemplate'
@@ -9,7 +9,7 @@ const app = express()
 app.use(express.static('./dist/client'))
 
 app.get('/', (req, res) => {
-  res.send(indexTemplate(ReactDOM.renderToString(Header())))
+  res.send(indexTemplate(renderToString(Header())))
 })
 
 app.listen(3000, () => {

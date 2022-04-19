@@ -5,7 +5,7 @@ export const indexTemplate = content => `
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <script src="client.js" defer></script>
+      <script src="./client.js" type="application/javascript"></script>
       <title>React</title>
     </head>
     <body><div id="react_root">${content}</div></body>
