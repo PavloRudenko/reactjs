@@ -1,8 +1,15 @@
 import { hot } from 'react-hot-loader/root'
-import React from 'react'
+import React, { FC } from 'react'
 
-const AppComponent = () => {
-  return <div>Hello React</div>
-}
+import { Header } from './shared/Header'
+
+import styles from './app.css'
+
+const AppComponent = () => (
+  <div className={styles.app}>
+    <h1 className={styles.app}>Hello React</h1>
+    <Header />
+  </div>
+)
 
 export const App = hot(AppComponent)

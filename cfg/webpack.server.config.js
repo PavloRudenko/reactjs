@@ -7,7 +7,7 @@ const GLOBAL_CSS_REGEXP = /\.global\.css$/
 module.exports = {
   target: 'node',
   mode: NODE_ENV,
-  entry: path.resolve(__dirname, '../src/server/server.js'),
+  entry: path.resolve(__dirname, '../src/server/server.ts'),
   output: {
     path: path.resolve(__dirname, '../dist/server'),
     filename: 'server.js',

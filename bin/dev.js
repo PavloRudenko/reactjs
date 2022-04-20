@@ -22,6 +22,10 @@ hmrServer.use(
 hmrServer.use(
   webpackHotMiddleware(clientCompiler, {
     path: '/static/__webpack_hmr',
+    noInfo: true,
+    watchOptions: {
+      ignore: /dist/,
+    },
   })
 )
 
