@@ -1,15 +1,15 @@
 import express from 'express'
 import { renderToString } from 'react-dom/server'
 
-import { Header } from '../shared/Header'
+import { App } from '../App'
 import { indexTemplate } from './indexTemplate'
 
 const app = express()
 
-app.use(express.static('./dist/client'))
+app.use('/static', express.static('./dist/client'))
 
 app.get('/', (req, res) => {
-  res.send(indexTemplate(renderToString(Header())))
+  res.send(indexTemplate(renderToString(App())))
 })
 
 app.listen(3000, () => {

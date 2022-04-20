@@ -7,17 +7,14 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 
 const [webpackClientConfig, webpackServerConfig] = require('../webpack.config')
 
-const hmrServer = express()
+const compiler = webpack(webpackServerConfig)
 const clientCompiler = webpack(webpackClientConfig)
+const hmrServer = express()
 
 hmrServer.use(
   webpackDevMiddleware(clientCompiler, {
     publicPath: webpackClientConfig.output.publicPath,
     serverSideRender: true,
-    // noInfo: true,
-    // watchOptions: {
-    //   ignore: /dist/,
-    // },
     writeToDisk: true,
     stats: 'errors-only',
   })
@@ -31,8 +28,6 @@ hmrServer.use(
 hmrServer.listen(3001, () => {
   console.log('HMR Server has been successfully started')
 })
-
-const compiler = webpack(webpackServerConfig)
 
 compiler.run(err => {
   if (err) {
