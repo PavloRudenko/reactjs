@@ -18,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.[tj]s?x?$/,
+        test: /\.[tj]sx?$/,
         use: ['ts-loader'],
       },
       {
@@ -30,8 +30,8 @@ module.exports = {
               modules: {
                 mode: 'local',
                 localIdentName: '[name]__[local]-[hash:base64:5]',
-                exportOnlyLocals: true,
               },
+              onlyLocals: true,
             },
           },
         ],

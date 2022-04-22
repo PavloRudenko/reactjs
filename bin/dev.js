@@ -15,6 +15,10 @@ hmrServer.use(
   webpackDevMiddleware(clientCompiler, {
     publicPath: webpackClientConfig.output.publicPath,
     serverSideRender: true,
+    noInfo: true,
+    watchOptions: {
+      ignore: /dist/,
+    },
     writeToDisk: true,
     stats: 'errors-only',
   })
@@ -22,10 +26,6 @@ hmrServer.use(
 hmrServer.use(
   webpackHotMiddleware(clientCompiler, {
     path: '/static/__webpack_hmr',
-    noInfo: true,
-    watchOptions: {
-      ignore: /dist/,
-    },
   })
 )
 

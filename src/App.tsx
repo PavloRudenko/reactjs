@@ -1,5 +1,5 @@
 import { hot } from 'react-hot-loader/root'
-import React, { FC } from 'react'
+import React from 'react'
 
 import { Header } from './shared/Header'
 
