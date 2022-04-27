@@ -16,11 +16,13 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^17.0.2",
+    "@types/enzyme": "^3.10.12",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.4.1",
     "@types/nodemon": "^1.19.1",
@@ -31,7 +33,11 @@
     "clean-webpack-plugin": "^4.0.0",
     "cross-env": "^7.0.3",
     "css-loader": "^3.4.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
     "html-webpack-plugin": "^4.5.2",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "react-hot-loader": "^4.13.0",
