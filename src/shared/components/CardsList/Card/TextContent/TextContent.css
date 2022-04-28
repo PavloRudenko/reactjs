@@ -1,0 +1,28 @@
+.textContent {
+  padding: 22px 20px;
+}
+
+.metaData {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1024px) {
+  .textContent {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    flex-basis: 672px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  .metaData {
+    margin-bottom: 0;
+  }
+
+  .title {
+    margin-bottom: 10px;
+  }
+}

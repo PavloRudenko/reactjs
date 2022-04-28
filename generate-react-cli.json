@@ -7,15 +7,14 @@
     "default": {
       "path": "src/shared/components",
       "withStyle": true,
-      "withTest": true,
+      "withTest": false,
       "withStory": false,
       "withLazy": false,
       "withIndex": true,
       "customTemplates": {
         "component": "templates/component/TemplateName.tsx",
         "index": "templates/component/index.ts",
-        "style": "templates/component/TemplateName.css",
-        "test": "templates/component/TemplateName.test.tsx"
+        "style": "templates/component/TemplateName.css"
       }
     }
   }

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dropdown /> create snapshot 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    id="test"
+    onClick={[Function]}
+  >
+    <button>
+      test
+    </button>
+  </div>
+</div>
+`;
+
+exports[`<Dropdown /> create snapshot with opened dropdown 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    id="test"
+    onClick={[Function]}
+  >
+    <button>
+      test
+    </button>
+  </div>
+  <ul
+    className="list"
+    onClick={[Function]}
+  >
+    <div />
+  </ul>
+</div>
+`;

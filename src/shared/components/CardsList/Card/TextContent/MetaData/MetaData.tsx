@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { concatClasses } from '../../../../../utils'
+import { concatClasses } from '../../../../../../utils'
 
 import styles from './MetaData.css'
 
@@ -21,7 +21,11 @@ const MetaData: FC<Props> = ({
 }) => (
   <div className={concatClasses(styles.metaData, className)}>
     <div className={styles.userLink}>
-      <img className={styles.avatar} src={avatarSrc} alt="Avatar" />
+      <img
+        className={styles.avatar}
+        src={avatarSrc}
+        alt={`Avatar ${username}`}
+      />
       <a href={userUrl} className={styles.username}>
         {username}
       </a>

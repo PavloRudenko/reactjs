@@ -1,0 +1,40 @@
+.controls {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.karmaCounter,
+.commentsButton {
+  position: relative;
+}
+
+.actions {
+  display: flex;
+  position: relative;
+}
+
+.chareButton {
+  margin-right: 15px;
+}
+
+@media (min-width: 1024px) {
+  .controls {
+    flex-basis: 70px;
+    padding: 0 0 0 40px;
+  }
+
+  .commentsButton {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .chareButton {
+    margin-right: 0;
+  }
+}

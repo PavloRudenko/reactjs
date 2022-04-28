@@ -1,0 +1,5 @@
+export * from './CommentsIcon'
+export * from './ChareIcon'
+export * from './SaveIcon'
+export * from './MenuIcon'
+export * from './ArrowIcon'
