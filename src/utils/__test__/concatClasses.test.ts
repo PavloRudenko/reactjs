@@ -1,4 +1,4 @@
-import { concatClasses } from '../concatClasses'
+import { concatClasses } from '..'
 
 describe('concatClasses', () => {
   test("should return 'Hello World'", () => {

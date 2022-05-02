@@ -5,6 +5,7 @@ import { concatClasses } from '../../../../../../utils'
 import styles from './ActionButton.css'
 
 interface Props {
+  id: number
   icon?: ReactNode
   className?: string
   text: string

@@ -1,1 +1,7 @@
 export * from './concatClasses'
+export * from './stopPropagation'
+export * from './preventDefault'
+export * from './preventAll'
+export * from './pickFromSyntheticEvent'
+export * from './withKey'
+export * from './addEventListenerWithDispose'

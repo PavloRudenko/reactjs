@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 
 import TextContent from './TextContent'
 import Preview from './Preview'
@@ -32,11 +32,9 @@ export interface ICard {
   controlsData: IControls
 }
 
-interface Props {
-  data: ICard
-}
+interface Props extends ICard {}
 
-const Card: FC<Props> = ({ data: { metaData, postData, controlsData } }) => {
+const Card: FC<Props> = ({ metaData, postData, controlsData }) => {
   return (
     <li className={styles.card}>
       <TextContent
