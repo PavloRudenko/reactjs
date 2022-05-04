@@ -1,38 +1,28 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 
-import ActionButton from './ActionButton'
+import ActionButton, { IActionButton } from './ActionButton'
 import KarmaCounter from './KarmaCounter'
 import CommentsButton from './CommentsButton'
 import { ChareIcon, SaveIcon } from '../../../Icons'
-import { concatClasses } from '../../../../../utils'
+import { concatClasses, generateId, merge } from '../../../../../utils'
+import { IControls } from '.'
 
 import styles from './Controls.css'
 import { withIdKey } from '../../CardsList'
 
-interface IActionButton {
-  id: number
-  icon?: ReactNode
-  className?: string
-  text: string
-}
-
 const ACTIONS_BUTTONS: IActionButton[] = [
   {
-    id: 0,
     text: 'Поделиться',
     className: styles.chareButton,
     icon: <ChareIcon />,
   },
   {
-    id: 1,
     text: 'Сохранить',
     icon: <SaveIcon />,
   },
-]
+].map(generateId)
 
-interface Props {
-  karmaCount: number
-  commentsCount: number
+interface Props extends IControls {
   className?: string
 }
 

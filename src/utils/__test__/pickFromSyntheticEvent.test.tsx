@@ -1,13 +1,12 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import { pickFromSyntheticEvent } from '..'
+import { getValue } from '..'
 
 const fn = jest.fn()
 
 describe('pickFromSyntheticEvent', () => {
   test("should return 'Hello World' in input value onChange event and call fn", () => {
-    const getValue = pickFromSyntheticEvent<HTMLInputElement>()('value')
     const wrapper = shallow(
       <input
         onChange={getValue(value => {

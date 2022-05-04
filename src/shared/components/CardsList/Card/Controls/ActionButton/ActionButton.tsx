@@ -1,15 +1,12 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
+
+import { IActionButton } from '.'
 
 import { concatClasses } from '../../../../../../utils'
 
 import styles from './ActionButton.css'
 
-interface Props {
-  id: number
-  icon?: ReactNode
-  className?: string
-  text: string
-}
+interface Props extends IActionButton {}
 
 const ActionButton: FC<Props> = ({ icon, className, text }) => (
   <button className={concatClasses(styles.actionButton, className)}>

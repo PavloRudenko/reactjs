@@ -1,40 +1,19 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 
 import TextContent from './TextContent'
 import Preview from './Preview'
 import MenuButton from './MenuButton'
 import Controls from './Controls'
+import { ICard } from '.'
+import { concatClasses } from '../../../../utils'
 
 import styles from './Card.css'
 
-interface IMetaData {
-  username: string
-  publishedLabel: string
-  avatarSrc: string
-  userUrl: string
+interface Props extends ICard {
+  className?: string
 }
 
-interface IPost {
-  title: string
-  postUrl: string
-  imageUrl: string
-}
-
-interface IControls {
-  karmaCount: number
-  commentsCount: number
-}
-
-export interface ICard {
-  id: number
-  metaData: IMetaData
-  postData: IPost
-  controlsData: IControls
-}
-
-interface Props extends ICard {}
-
-const Card: FC<Props> = ({ metaData, postData, controlsData }) => {
+const Card: FC<Props> = ({ metaData, postData, controlsData, className }) => {
   return (
     <li className={styles.card}>
       <TextContent

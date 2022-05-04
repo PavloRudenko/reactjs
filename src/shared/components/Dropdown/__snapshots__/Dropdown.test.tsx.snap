@@ -5,7 +5,7 @@ exports[`<Dropdown /> create snapshot 1`] = `
   className="dropdown"
 >
   <div
-    id="test"
+    id="test_dropdown"
     onClick={[Function]}
   >
     <button>
@@ -20,7 +20,7 @@ exports[`<Dropdown /> create snapshot with opened dropdown 1`] = `
   className="dropdown"
 >
   <div
-    id="test"
+    id="test_dropdown"
     onClick={[Function]}
   >
     <button>

@@ -6,3 +6,5 @@ export const pickFromSyntheticEvent =
   <F extends (t: T[K]) => void>(fn: F) =>
   (e: SyntheticEvent<T>) =>
     fn(e.currentTarget[key])
+
+export const getValue = pickFromSyntheticEvent<HTMLInputElement>()('value')

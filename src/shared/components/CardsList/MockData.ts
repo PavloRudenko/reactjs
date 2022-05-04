@@ -1,8 +1,8 @@
-import { ICard } from './Card/Card'
+import { ICard } from './Card'
+import { generateId } from '../../../utils'
 
 export const cards: ICard[] = [
   {
-    id: 1,
     metaData: {
       username: 'Дмитрий Гришин',
       publishedLabel: '4 часа назад',
@@ -19,7 +19,6 @@ export const cards: ICard[] = [
     controlsData: { karmaCount: 236, commentsCount: 14 },
   },
   {
-    id: 2,
     metaData: {
       username: 'Иван Иванов',
       publishedLabel: '2 часа назад',
@@ -36,7 +35,6 @@ export const cards: ICard[] = [
     controlsData: { karmaCount: 123, commentsCount: 5 },
   },
   {
-    id: 3,
     metaData: {
       username: 'Пётр Петров',
       publishedLabel: '3 часа назад',
@@ -51,4 +49,4 @@ export const cards: ICard[] = [
     },
     controlsData: { karmaCount: 763, commentsCount: 101 },
   },
-]
+].map(generateId)

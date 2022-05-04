@@ -1,15 +1,12 @@
 import React, { FC } from 'react'
 
 import { concatClasses } from '../../../../../../utils'
+import { IMetaData } from '.'
 
 import styles from './MetaData.css'
 
-interface Props {
+interface Props extends IMetaData {
   className?: string
-  avatarSrc: string
-  userUrl: string
-  publishedLabel: string
-  username: string
 }
 
 const MetaData: FC<Props> = ({

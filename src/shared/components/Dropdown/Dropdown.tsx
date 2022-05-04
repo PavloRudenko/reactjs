@@ -1,6 +1,7 @@
-import React, { FC, ReactNode, useRef, useState } from 'react'
+import React, { FC, ReactNode, useEffect, useState } from 'react'
 
-import { concatClasses } from '../../../utils'
+import { concatClasses, noop } from '../../../utils'
+import { useIsMounted } from '../../hooks/useIsMounted'
 
 import styles from './Dropdown.css'
 
@@ -9,6 +10,9 @@ interface Props {
   children: ReactNode
   className?: string
   listClassName?: string
+  isOpen?: boolean
+  onOpen?: () => void
+  onClose?: () => void
 }
 
 const Dropdown: FC<Props> = ({
@@ -16,18 +20,29 @@ const Dropdown: FC<Props> = ({
   children,
   className,
   listClassName,
+  isOpen,
+  onOpen = noop,
+  onClose = noop,
 }) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(isOpen)
+  useEffect(() => setIsDropdownOpen(isOpen), [isOpen])
+  useEffect(() => (isDropdownOpen ? onOpen() : onClose()), [isDropdownOpen])
+
+  const handleOpen = () => {
+    if (isOpen === undefined) {
+      setIsDropdownOpen(!isDropdownOpen)
+    }
+  }
 
   return (
     <div className={concatClasses(styles.dropdown, className)}>
-      <div id="test" onClick={() => setIsOpen(!isOpen)}>
+      <div id="test_dropdown" onClick={handleOpen}>
         {button}
       </div>
-      {isOpen && (
+      {isDropdownOpen && (
         <ul
           className={concatClasses(styles.list, listClassName)}
-          onClick={() => setIsOpen(false)}
+          onClick={() => setIsDropdownOpen(false)}
         >
           {children}
         </ul>

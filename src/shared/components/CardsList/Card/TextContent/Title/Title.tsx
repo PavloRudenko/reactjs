@@ -1,12 +1,11 @@
 import React, { FC } from 'react'
 
 import { concatClasses } from '../../../../../../utils'
+import { ITitle } from '.'
 
 import styles from './Title.css'
 
-interface Props {
-  title: string
-  postUrl: string
+interface Props extends ITitle {
   className?: string
 }
 

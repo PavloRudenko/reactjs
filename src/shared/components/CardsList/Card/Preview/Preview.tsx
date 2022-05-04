@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 
-interface Props {
-  imageUrl: string
+import { IPreview } from '.'
+
+interface Props extends IPreview {
   className?: string
 }
 

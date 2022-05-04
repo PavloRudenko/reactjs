@@ -17,11 +17,11 @@ describe('<Dropdown />', () => {
 
   test('should open and close', () => {
     expect(wrapper.find('ul.list').length).toBe(0)
-    wrapper.find('#test').simulate('click')
+    wrapper.find('#test_dropdown').simulate('click')
     expect(wrapper.find('ul.list').length).toBe(1)
-    wrapper.find('#test').simulate('click')
+    wrapper.find('#test_dropdown').simulate('click')
     expect(wrapper.find('ul.list').length).toBe(0)
-    wrapper.find('#test').simulate('click')
+    wrapper.find('#test_dropdown').simulate('click')
     expect(wrapper.find('ul.list').length).toBe(1)
     wrapper.find('ul.list').simulate('click')
     expect(wrapper.find('ul.list').length).toBe(0)
@@ -32,7 +32,7 @@ describe('<Dropdown />', () => {
   })
 
   test('create snapshot with opened dropdown', () => {
-    wrapper.find('#test').simulate('click')
+    wrapper.find('#test_dropdown').simulate('click')
     expect(wrapper).toMatchSnapshot()
   })
 })
