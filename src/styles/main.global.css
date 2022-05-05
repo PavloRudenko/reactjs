@@ -12,10 +12,18 @@
   --greyC4: #c4c4c4;
   --grey99: #999999;
   --grey66: #666666;
+
+  --textXXL: 28px;
+  --textXL: 20px;
+  --textL: 16px;
+  --textM: 14px;
+  --textS: 12px;
+  --textXS: 10px;
 }
 
 html {
   box-sizing: border-box;
+  color: var(--black);
 }
 
 body {
@@ -27,7 +35,7 @@ body {
 }
 
 * {
-  color: var(--black);
+  color: inherit;
   box-sizing: inherit;
 }
 

@@ -1,9 +1,3 @@
-.title {
-  font-size: 16px;
-  line-height: 19px;
-  font-weight: normal;
-}
-
 .postLink {
   overflow: hidden;
   -webkit-line-clamp: 2;
@@ -18,13 +12,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-}
-
-@media (min-width: 1024px) {
-  .title {
-    font-size: 20px;
-    line-height: 23px;
-  }
 }
 
 @media (min-width: 1540px) {

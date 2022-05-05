@@ -1,0 +1,157 @@
+.s28 {
+  font-size: var(--textXXL);
+  line-height: calc(var(--textXXL) + 5px);
+}
+
+.s20 {
+  font-size: var(--textXL);
+  line-height: calc(var(--textXL) + 3px);
+}
+
+.s16 {
+  font-size: var(--textL);
+  line-height: calc(var(--textL) + 3px);
+}
+
+.s14 {
+  font-size: var(--textM);
+  line-height: calc(var(--textM) + 2px);
+}
+
+.s12 {
+  font-size: var(--textS);
+  line-height: calc(var(--textS) + 2px);
+}
+
+.s10 {
+  font-size: var(--textXS);
+  line-height: calc(var(--textXS) + 2px);
+}
+
+.black {
+  color: var(--black);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.green {
+  color: var(--green);
+}
+
+.white {
+  color: var(--white);
+}
+
+.greyF4 {
+  color: var(--greyF4);
+}
+
+.greyF3 {
+  color: var(--greyF3);
+}
+
+.greyD9 {
+  color: var(--greyD9);
+}
+
+.greyC4 {
+  color: var(--greyC4);
+}
+
+.grey99 {
+  color: var(--grey99);
+}
+
+.grey66 {
+  color: var(--grey66);
+}
+
+.weight400 {
+  font-weight: 400;
+}
+
+.weight500 {
+  font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+  .t28 {
+    font-size: var(--textXXL);
+    line-height: calc(var(--textXXL) + 5px);
+  }
+
+  .t20 {
+    font-size: var(--textXL);
+    line-height: calc(var(--textXL) + 3px);
+  }
+
+  .t16 {
+    font-size: var(--textL);
+    line-height: calc(var(--textL) + 3px);
+  }
+
+  .t14 {
+    font-size: var(--textM);
+    line-height: calc(var(--textM) + 2px);
+  }
+
+  .t12 {
+    font-size: var(--textS);
+    line-height: calc(var(--textS) + 2px);
+  }
+
+  .t10 {
+    font-size: var(--textXS);
+    line-height: calc(var(--textXS) + 2px);
+  }
+
+  .tWeight400 {
+    font-weight: 400;
+  }
+
+  .tWeight500 {
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1540px) {
+  .d28 {
+    font-size: var(--textXXL);
+    line-height: calc(var(--textXXL) + 5px);
+  }
+
+  .d20 {
+    font-size: var(--textXL);
+    line-height: calc(var(--textXL) + 3px);
+  }
+
+  .d16 {
+    font-size: var(--textL);
+    line-height: calc(var(--textL) + 3px);
+  }
+
+  .d14 {
+    font-size: var(--textM);
+    line-height: calc(var(--textM) + 2px);
+  }
+
+  .d12 {
+    font-size: var(--textS);
+    line-height: calc(var(--textS) + 2px);
+  }
+
+  .d10 {
+    font-size: var(--textXS);
+    line-height: calc(var(--textXS) + 2px);
+  }
+
+  .dWeight400 {
+    font-weight: 400;
+  }
+
+  .dWeight500 {
+    font-weight: 500;
+  }
+}

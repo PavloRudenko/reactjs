@@ -2,6 +2,8 @@ import React, { FC } from 'react'
 
 import { ArrowIcon } from '../../../../Icons'
 import { concatClasses } from '../../../../../../utils'
+import Text from '../../../../Text'
+import { EColor } from '../../../../../constants'
 
 import styles from './KarmaCounter.css'
 
@@ -15,7 +17,9 @@ const KarmaCounter: FC<Props> = ({ className, count }) => (
     <button className={styles.up}>
       <ArrowIcon />
     </button>
-    <span className={styles.karmaValue}>{count}</span>
+    <Text size={12} tSize={14} weight={500} tWeight={400} color={EColor.greyC4}>
+      {count}
+    </Text>
     <button className={styles.down}>
       <ArrowIcon />
     </button>

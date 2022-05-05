@@ -1,7 +1,9 @@
 import React, { FC } from 'react'
 
-import { concatClasses } from '../../../../../../utils'
 import { IMetaData } from '.'
+import Text from '../../../../Text'
+import { concatClasses } from '../../../../../../utils'
+import { EColor } from '../../../../../constants'
 
 import styles from './MetaData.css'
 
@@ -16,7 +18,12 @@ const MetaData: FC<Props> = ({
   publishedLabel,
   username,
 }) => (
-  <div className={concatClasses(styles.metaData, className)}>
+  <Text
+    As="div"
+    size={10}
+    tSize={14}
+    className={concatClasses(styles.metaData, className)}
+  >
     <div className={styles.userLink}>
       <img
         className={styles.avatar}
@@ -27,11 +34,13 @@ const MetaData: FC<Props> = ({
         {username}
       </a>
     </div>
-    <span className={styles.createdAt}>
-      <span className={styles.publishedLabel}>опубликовано </span>
+    <Text color={EColor.grey99} className={styles.createdAt}>
+      <Text color={EColor.grey99} className={styles.publishedLabel}>
+        опубликовано{' '}
+      </Text>
       {publishedLabel}
-    </span>
-  </div>
+    </Text>
+  </Text>
 )
 
 export default MetaData

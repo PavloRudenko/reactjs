@@ -5,8 +5,5 @@
 }
 
 .actionText {
-  color: var(--grey99);
-  font-size: 12px;
-  line-height: 14px;
   padding-left: 6px;
 }

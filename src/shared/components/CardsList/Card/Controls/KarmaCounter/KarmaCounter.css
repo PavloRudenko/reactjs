@@ -1,13 +1,20 @@
+.karmaCounter {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
 .karmaCounter > *:not(:last-child) {
   padding-right: 4px;
 }
 
-.karmaValue {
-  color: var(--greyC4);
-}
-
 .down svg {
   transform: rotate(180deg);
+}
+
+@media (min-width: 1024px) {
+  .karmaCounter {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: 1540px) {

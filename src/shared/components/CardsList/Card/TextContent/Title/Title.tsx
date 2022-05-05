@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import { concatClasses } from '../../../../../../utils'
+import Text from '../../../../Text'
 import { ITitle } from '.'
 
 import styles from './Title.css'
@@ -10,11 +10,11 @@ interface Props extends ITitle {
 }
 
 const Title: FC<Props> = ({ title, postUrl, className }) => (
-  <h2 className={concatClasses(styles.title, className)}>
+  <Text As="h2" weight={400} size={16} tSize={20} className={className}>
     <a href={postUrl} className={styles.postLink}>
       {title}
     </a>
-  </h2>
+  </Text>
 )
 
 export default Title
