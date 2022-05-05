@@ -8,13 +8,11 @@ import CardsList from './shared/components/CardsList'
 
 import './styles/normalize.global.css'
 import './styles/main.global.css'
-import { Input } from './compose'
 
 const AppComponent: FC = () => (
   <Layout>
     <Header />
     <Content>
-      <Input />
       <CardsList />
     </Content>
   </Layout>

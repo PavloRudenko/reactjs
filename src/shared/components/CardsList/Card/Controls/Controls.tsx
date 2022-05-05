@@ -4,20 +4,22 @@ import ActionButton, { IActionButton } from './ActionButton'
 import KarmaCounter from './KarmaCounter'
 import CommentsButton from './CommentsButton'
 import { ChareIcon, SaveIcon } from '../../../Icons'
-import { concatClasses, generateId, merge } from '../../../../../utils'
+import {
+  concatClasses,
+  generateId,
+  merge,
+  withIdKey,
+} from '../../../../../utils'
 import { IControls } from '.'
 
 import styles from './Controls.css'
-import { withIdKey } from '../../CardsList'
 
 const ACTIONS_BUTTONS: IActionButton[] = [
   {
-    text: 'Поделиться',
     className: styles.chareButton,
     icon: <ChareIcon />,
   },
   {
-    text: 'Сохранить',
     icon: <SaveIcon />,
   },
 ].map(generateId)

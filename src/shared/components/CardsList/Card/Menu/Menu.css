@@ -1,0 +1,48 @@
+.list {
+  background-color: var(--white);
+  top: calc(100% + 10px);
+  left: unset;
+  right: 0;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.item {
+  position: relative;
+  padding: 12px 20px;
+}
+
+.item:not(:last-of-type)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  width: 70%;
+  height: 1px;
+  background-color: var(--greyEC);
+}
+
+.close {
+  width: 100%;
+  background-color: var(--greyD9);
+}
+
+.close span {
+  color: var(--grey66);
+}
+
+@media (min-width: 1024px) {
+  .list {
+    top: calc(100% + 20px);
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  @media (min-width: 1540px) {
+    .item:hover * {
+      color: var(--orange);
+      fill: var(--orange);
+    }
+  }
+}

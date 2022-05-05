@@ -11,7 +11,7 @@ interface Props extends IActionButton {}
 const ActionButton: FC<Props> = ({ icon, className, text }) => (
   <button className={concatClasses(styles.actionButton, className)}>
     {icon}
-    <span className={styles.actionText}>{text}</span>
+    {text && <span className={styles.actionText}>{text}</span>}
   </button>
 )
 

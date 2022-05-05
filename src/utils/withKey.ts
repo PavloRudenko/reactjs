@@ -8,3 +8,5 @@ export const withKey =
       ...props,
       key: key ? props[key as keyof E] : index,
     })
+
+export const withIdKey = withKey('id')
