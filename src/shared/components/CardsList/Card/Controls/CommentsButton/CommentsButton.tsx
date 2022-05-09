@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
 
-import { CommentsIcon } from '../../../../Icons'
-import { concatClasses } from '../../../../../../utils'
+import Icon from '../../../../Icon'
 import Text from '../../../../Text'
 import { EColor } from '../../../../../constants'
+import { concatClasses } from '../../../../../../utils'
 
 import styles from './CommentsButton.css'
 
@@ -14,7 +14,7 @@ interface Props {
 
 const CommentsButton: FC<Props> = ({ count, className }) => (
   <button className={concatClasses(styles.commentsButton, className)}>
-    <CommentsIcon />
+    <Icon name={'CommentsIcon'} width={15} />
     <Text
       color={EColor.greyC4}
       weight={500}

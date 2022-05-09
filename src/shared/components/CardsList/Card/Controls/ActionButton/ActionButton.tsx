@@ -14,7 +14,12 @@ const ActionButton: FC<Props> = ({ icon, className, text }) => (
   <button className={concatClasses(styles.actionButton, className)}>
     {icon}
     {text && (
-      <Text color={EColor.grey99} size={12} className={styles.actionText}>
+      <Text
+        color={EColor.grey99}
+        size={12}
+        tSize={14}
+        className={styles.actionText}
+      >
         {text}
       </Text>
     )}

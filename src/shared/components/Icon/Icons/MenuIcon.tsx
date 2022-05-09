@@ -1,13 +1,7 @@
 import React, { FC } from 'react'
 
 export const MenuIcon: FC = () => (
-  <svg
-    width="20"
-    height="5"
-    viewBox="0 0 20 5"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <>
     <circle
       cx="17.5"
       cy="2.5"
@@ -29,5 +23,5 @@ export const MenuIcon: FC = () => (
       transform="rotate(90 2.5 2.5)"
       fill="#D9D9D9"
     />
-  </svg>
+  </>
 )

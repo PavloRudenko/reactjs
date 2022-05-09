@@ -4,8 +4,9 @@ import MenuButton from '../MenuButton'
 import Dropdown from '../../../Dropdown'
 import GenericList from '../../../GenericList'
 import { IItem } from '../../../GenericList/GenericList'
-import { ComplainIcon, HiddenIcon } from '../../../Icons'
+import Icon, { TIconsKeys } from '../../../Icon'
 import ActionButton, { IActionButton } from '../Controls/ActionButton'
+import Visibility, { EScreen } from '../../../Visibility'
 import {
   concatClasses,
   generateId,
@@ -14,6 +15,7 @@ import {
   assignAs,
   assignOnClick,
   assignChildren,
+  assignIcon,
 } from '../../../../../utils'
 
 import styles from './Menu.css'
@@ -39,25 +41,53 @@ const addChildren =
     assignChildren(obj, child)
 
 const addActionButton = <O extends {}>(props: O) =>
-  addChildren(<ActionButton {...props} />)(props)
+  addChildren(
+    <Visibility {...props}>
+      <ActionButton className={styles.actionButton} {...props} />
+    </Visibility>
+  )(props)
 
-const ActionButtons: IActionButton[] = [
+const addIcon =
+  (width: number) =>
+  <O extends { name: TIconsKeys }>(props: O) =>
+    assignIcon(props, <Icon {...props} width={width} />)
+
+type TActionButton = IActionButton & {
+  screen?: EScreen
+  name: TIconsKeys
+}
+
+const ActionButtons: TActionButton[] = [
+  {
+    text: 'Комментарии',
+    name: 'CommentsIcon',
+    screen: EScreen.tablet,
+  },
+  {
+    text: 'Поделиться',
+    name: 'ChareWithoutBGIcon',
+    screen: EScreen.tablet,
+  },
   {
     text: 'Скрыть',
-    icon: <HiddenIcon />,
+    name: 'HiddenIcon',
+  },
+  {
+    text: 'Сохранить',
+    name: 'SaveWithoutBGIcon',
+    screen: EScreen.tablet,
   },
   {
     text: 'Пожаловаться',
-    icon: <ComplainIcon />,
+    name: 'ComplainIcon',
   },
 ]
 
 interface Props {
   className?: string
-  isCloseButton?: boolean
 }
 
-const Menu: FC<Props> = ({ className, isCloseButton = true }) => (
+const Menu: FC<Props> = ({ className }) => (
   <Dropdown
     listClassName={styles.list}
     className={className}
@@ -67,6 +97,7 @@ const Menu: FC<Props> = ({ className, isCloseButton = true }) => (
       list={ActionButtons.map(
         pipe<IItem>(
           generateId,
+          addIcon(15),
           addActionButton,
           addClassName(styles.item),
           addAs('li'),
@@ -74,12 +105,10 @@ const Menu: FC<Props> = ({ className, isCloseButton = true }) => (
         )
       )}
     />
-    {isCloseButton && (
-      <ActionButton
-        className={concatClasses(styles.item, styles.close)}
-        text={'Закрыть'}
-      />
-    )}
+    <ActionButton
+      className={concatClasses(styles.actionButton, styles.close)}
+      text={'Закрыть'}
+    />
   </Dropdown>
 )
 

@@ -8,9 +8,13 @@
   cursor: pointer;
 }
 
+.actionButton {
+  width: 100%;
+  padding: 12px 20px;
+}
+
 .item {
   position: relative;
-  padding: 12px 20px;
 }
 
 .item:not(:last-of-type)::after {
@@ -24,8 +28,8 @@
 }
 
 .close {
-  width: 100%;
   background-color: var(--greyD9);
+  justify-content: center;
 }
 
 .close span {

@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 import { concatClasses } from '../../../../../utils'
-import { MenuIcon } from '../../../Icons'
+import Icon from '../../../Icon'
 
 import styles from './MenuButton.css'
 
@@ -11,7 +11,7 @@ interface Props {
 
 const MenuButton: FC<Props> = ({ className }) => (
   <button className={concatClasses(styles.menuButton, className)}>
-    <MenuIcon />
+    <Icon name={'MenuIcon'} width={20} height={5} />
   </button>
 )
 

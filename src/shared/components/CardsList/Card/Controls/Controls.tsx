@@ -3,13 +3,8 @@ import React, { FC } from 'react'
 import ActionButton, { IActionButton } from './ActionButton'
 import KarmaCounter from './KarmaCounter'
 import CommentsButton from './CommentsButton'
-import { ChareIcon, SaveIcon } from '../../../Icons'
-import {
-  concatClasses,
-  generateId,
-  merge,
-  withIdKey,
-} from '../../../../../utils'
+import Icon from '../../../Icon'
+import { concatClasses, generateId, withIdKey } from '../../../../../utils'
 import { IControls } from '.'
 
 import styles from './Controls.css'
@@ -17,10 +12,10 @@ import styles from './Controls.css'
 const ACTIONS_BUTTONS: IActionButton[] = [
   {
     className: styles.chareButton,
-    icon: <ChareIcon />,
+    icon: <Icon name={'ChareIcon'} width={20} />,
   },
   {
-    icon: <SaveIcon />,
+    icon: <Icon name={'SaveIcon'} width={20} />,
   },
 ].map(generateId)
 
